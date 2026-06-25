@@ -1,0 +1,46 @@
+# Virtual environment
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Data (large, not tracked)
+data/
+ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3/
+
+# Typst build output
+typst/*.pdf
+
+# HuggingFace model cache (root only — must NOT match source/LLaVA/llava/model/)
+/model/
+
+# Local base-model snapshot & training checkpoints (large, not tracked)
+/PULSE-7B/
+/checkpoint/
+/checkpoints/
+
+# Copyrighted papers / downloaded literature — backed up separately (papers_backup.zip -> Drive), NOT public
+/material/
+/khoaluan/papers/
+/PULSE/
+papers_backup.zip
+
+# Local backup / scratch
+*.bak
+.add/
+
+# Generated 3-task training data (downloaded from Drive, kept off git)
+/khoaluan/json/
+/khoaluan/data.zip
+
+# Knowledge base archive (kept off git)
+/khoaluan/thesis/knowledgebase.zip

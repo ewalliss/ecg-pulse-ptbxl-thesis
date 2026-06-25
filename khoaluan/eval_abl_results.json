@@ -1,0 +1,7 @@
+{
+  "_note": "Ablation on checkpoint-312 (epoch-2), fold-10 test, N=80/task, Colab T4, 4-bit teacher-forced. Proves model uses the ECG image (blank/shuffle collapse) and no label leakage (signal is image-only; placeholder=1 stays >>chance).",
+  "real":            {"diag": 0.9355, "rhythm": 0.9675, "form": 0.9309, "mean": 0.9446},
+  "blank":           {"diag": 0.5,    "rhythm": 0.5,    "form": 0.5,    "mean": 0.5},
+  "shuffle":         {"diag": 0.4539, "rhythm": 0.3656, "form": 0.4609, "mean": 0.4268},
+  "placeholder_one": {"diag": 0.8329, "rhythm": 0.7222, "form": 0.8386, "mean": 0.7979}
+}

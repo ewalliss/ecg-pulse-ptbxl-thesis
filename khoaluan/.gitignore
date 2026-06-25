@@ -1,0 +1,5 @@
+# Không đẩy file nặng / sinh ra
+papers/*.pdf
+paper/*.pdf
+notes/
+runs/

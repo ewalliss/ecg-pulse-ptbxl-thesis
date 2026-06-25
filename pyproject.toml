@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=75.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecg-llava"
+version = "0.1.0"
+description = "Multi-label ECG classification adapting LLaVA-Med for 71 SCP-ECG codes on PTB-XL"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy==2.4.3",
+    "pandas==3.0.1",
+    "scipy==1.17.1",
+    "matplotlib==3.10.8",
+    "wfdb==4.3.1",
+    "Pillow==12.1.1",
+    "tqdm>=4.66",
+    "torch>=2.1.0",
+    "transformers>=4.36.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+
+[tool.setuptools.packages.find]
+include = ["preprocessing_pipeline*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "gpu: marks tests that require CUDA GPU (deselect with '-m not gpu')",
+    "slow: marks tests that download model weights (deselect with '-m not slow')",
+]
